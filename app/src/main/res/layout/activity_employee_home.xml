@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgHomeProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#E0E0E0"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHomeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Carregando..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgHomeProfile"
+        app:layout_constraintTop_toTopOf="@id/imgHomeProfile" />
+
+    <TextView
+        android:id="@+id/tvHomeCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="CPF: ..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgHomeProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvHomeName" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#AAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeProfile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Meus Certificados"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <View
+        android:id="@+id/statusAvsec"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/circle_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/lblAvsec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="AVSEC (Validade: 2 anos)"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/statusAvsec"
+        app:layout_constraintTop_toTopOf="@id/statusAvsec" />
+
+    <TextView
+        android:id="@+id/tvDateAvsec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Vence em: --/--/----"
+        app:layout_constraintStart_toEndOf="@id/statusAvsec"
+        app:layout_constraintTop_toBottomOf="@id/lblAvsec" />
+
+    <View
+        android:id="@+id/statusCnv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusAvsec" />
+
+    <TextView
+        android:id="@+id/lblCnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="CNV (Validade: 2 anos)"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/statusCnv"
+        app:layout_constraintTop_toTopOf="@id/statusCnv" />
+
+    <TextView
+        android:id="@+id/tvDateCnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Vence em: --/--/----"
+        app:layout_constraintStart_toEndOf="@id/statusCnv"
+        app:layout_constraintTop_toBottomOf="@id/lblCnv" />
+
+    <View
+        android:id="@+id/statusCred"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusCnv" />
+
+    <TextView
+        android:id="@+id/lblCred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Credencial (Validade: 1 ano)"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/statusCred"
+        app:layout_constraintTop_toTopOf="@id/statusCred" />
+
+    <TextView
+        android:id="@+id/tvDateCred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Vence em: --/--/----"
+        app:layout_constraintStart_toEndOf="@id/statusCred"
+        app:layout_constraintTop_toBottomOf="@id/lblCred" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Alterar Dados Cadastrais"
+        app:layout_constraintBottom_toTopOf="@id/btnLogout"
+        tools:layout_editor_absoluteX="-10dp" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D32F2F"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
