@@ -120,4 +120,3 @@ Nota: O banco de dados é criado automaticamente na primeira execução do aplic
 
 [ ] Geração de relatórios em PDF para o líder.
 
-<div align="center"> <sub>Desenvolvido com foco em Clean Code e Usabilidade.</sub> </div>
