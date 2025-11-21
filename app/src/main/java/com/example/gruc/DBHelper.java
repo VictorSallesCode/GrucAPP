@@ -138,4 +138,30 @@ public class DBHelper extends SQLiteOpenHelper {
         bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
         return stream.toByteArray();
     }
+    // 8. Buscar TODOS os funcionários (para a lista do Líder)
+    // Importante: importar java.util.ArrayList e java.util.List;
+    public java.util.List<User> getAllEmployees() {
+        java.util.List<User> lista = new java.util.ArrayList<>();
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+
+        // Pega todos que NÃO são líderes (eh_lider = 0)
+        Cursor cursor = MyDB.rawQuery("Select * from users where eh_lider = 0", null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                // Pegar dados
+                String nome = cursor.getString(cursor.getColumnIndexOrThrow("nome"));
+                String cpf = cursor.getString(cursor.getColumnIndexOrThrow("cpf"));
+                byte[] foto = cursor.getBlob(cursor.getColumnIndexOrThrow("foto"));
+                String dAvsec = cursor.getString(cursor.getColumnIndexOrThrow("data_avsec"));
+                String dCnv = cursor.getString(cursor.getColumnIndexOrThrow("data_cnv"));
+                String dCred = cursor.getString(cursor.getColumnIndexOrThrow("data_cred"));
+
+                // Criar objeto e adicionar na lista
+                lista.add(new User(nome, cpf, foto, dAvsec, dCnv, dCred));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return lista;
+    }
 }

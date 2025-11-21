@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="28dp"
+        android:text="Detalhes do Funcionário"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/dividerTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#AAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailTitle" />
+
+    <ImageView
+        android:id="@+id/imgDetailProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="#E0E0E0"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerTop" />
+
+    <TextView
+        android:id="@+id/tvDetailName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Carregando..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgDetailProfile"
+        app:layout_constraintTop_toTopOf="@id/imgDetailProfile" />
+
+    <TextView
+        android:id="@+id/tvDetailCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="CPF: ..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgDetailProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailName" />
+
+    <TextView
+        android:id="@+id/lblCert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Status dos Certificados"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgDetailProfile" />
+
+    <View
+        android:id="@+id/statusDetailAvsec"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblCert" />
+
+    <TextView
+        android:id="@+id/lblDetailAvsec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="AVSEC"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/statusDetailAvsec"
+        app:layout_constraintTop_toTopOf="@id/statusDetailAvsec" />
+
+    <TextView
+        android:id="@+id/tvDetailDateAvsec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Validade: --/--/----"
+        app:layout_constraintStart_toEndOf="@id/statusDetailAvsec"
+        app:layout_constraintTop_toBottomOf="@id/lblDetailAvsec" />
+
+    <View
+        android:id="@+id/statusDetailCnv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusDetailAvsec" />
+
+    <TextView
+        android:id="@+id/lblDetailCnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="CNV"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/statusDetailCnv"
+        app:layout_constraintTop_toTopOf="@id/statusDetailCnv" />
+
+    <TextView
+        android:id="@+id/tvDetailDateCnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Validade: --/--/----"
+        app:layout_constraintStart_toEndOf="@id/statusDetailCnv"
+        app:layout_constraintTop_toBottomOf="@id/lblDetailCnv" />
+
+    <View
+        android:id="@+id/statusDetailCred"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusDetailCnv" />
+
+    <TextView
+        android:id="@+id/lblDetailCred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Credencial"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/statusDetailCred"
+        app:layout_constraintTop_toTopOf="@id/statusDetailCred" />
+
+    <TextView
+        android:id="@+id/tvDetailDateCred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Validade: --/--/----"
+        app:layout_constraintStart_toEndOf="@id/statusDetailCred"
+        app:layout_constraintTop_toBottomOf="@id/lblDetailCred" />
+
+    <Button
+        android:id="@+id/btnDetailBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
