@@ -82,10 +82,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // Ação do link "Esqueceu a senha"
         tvForgot.setOnClickListener(view -> {
-            // Vamos criar esta tela depois, por enquanto exibe aviso
-            Toast.makeText(LoginActivity.this, "Funcionalidade em construção", Toast.LENGTH_SHORT).show();
-            // Quando criarmos a ForgotPasswordActivity, descomente a linha abaixo:
-            // startActivity(new Intent(getApplicationContext(), ForgotPasswordActivity.class));
+            Intent intent = new Intent(getApplicationContext(), ForgotPasswordActivity.class);
+            startActivity(intent);
         });
     }
 }
