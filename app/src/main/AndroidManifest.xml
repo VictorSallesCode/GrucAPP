@@ -24,6 +24,7 @@
         <activity android:name=".EmployeeHomeActivity" />
         <activity android:name=".LeaderHomeActivity" />
         <activity android:name=".EmployeeDetailActivity" />
+        <activity android:name=".EditProfileActivity" />
     </application>
 
 </manifest>

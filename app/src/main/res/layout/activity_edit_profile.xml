@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvEditTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Meus Dados"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblFixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dados de Identificação (Não editáveis)"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEditTitle" />
+
+        <EditText
+            android:id="@+id/etEditNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Nome"
+            android:backgroundTint="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/lblFixed" />
+
+        <EditText
+            android:id="@+id/etEditCpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="CPF"
+            android:backgroundTint="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/etEditNome" />
+
+        <TextView
+            android:id="@+id/lblEditable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Dados de Contato"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEditCpf" />
+
+        <EditText
+            android:id="@+id/etEditEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/lblEditable" />
+
+        <EditText
+            android:id="@+id/etEditPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@id/etEditEmail" />
+
+        <TextView
+            android:id="@+id/lblDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Atualizar Datas de Emissão (DD/MM/AAAA)"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEditPhone" />
+
+        <EditText
+            android:id="@+id/etEditAvsec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data AVSEC"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/lblDates" />
+
+        <EditText
+            android:id="@+id/etEditCnv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data CNV"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/etEditAvsec" />
+
+        <EditText
+            android:id="@+id/etEditCred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data Credencial"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/etEditCnv" />
+
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Salvar Alterações"
+            app:layout_constraintTop_toBottomOf="@id/etEditCred" />
+
+        <Button
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/btnSaveChanges" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

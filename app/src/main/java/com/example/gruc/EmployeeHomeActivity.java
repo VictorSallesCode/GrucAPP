@@ -74,9 +74,9 @@ public class EmployeeHomeActivity extends AppCompatActivity {
         // Botão Editar (Vamos criar essa tela depois)
         btnEdit.setOnClickListener(v -> {
             Toast.makeText(this, "Funcionalidade Editar será a próxima!", Toast.LENGTH_SHORT).show();
-            // Intent intent = new Intent(EmployeeHomeActivity.this, EditProfileActivity.class);
-            // intent.putExtra("USER_CPF", userCpf);
-            // startActivity(intent);
+            Intent intent = new Intent(EmployeeHomeActivity.this, EditProfileActivity.class);
+            intent.putExtra("USER_CPF", userCpf);
+            startActivity(intent);
         });
     }
 
@@ -182,4 +182,5 @@ public class EmployeeHomeActivity extends AppCompatActivity {
                 .setPositiveButton("OK", null)
                 .show();
     }
+
 }
