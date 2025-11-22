@@ -131,7 +131,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    // Método auxiliar: Converter Bitmap (imagem) para Byte Array (para salvar no banco)
+    // Metodo auxiliar: Converter Bitmap (imagem) para Byte Array (para salvar no banco)
     public static byte[] getBytesFromBitmap(Bitmap bitmap) {
         if (bitmap == null) return null;
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
