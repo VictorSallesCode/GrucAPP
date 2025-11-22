@@ -4,15 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/logotipo"
+        android:layout_width="71dp"
+        android:layout_height="55dp"
+        android:src="@drawable/logotipo"
+        app:layout_constraintBottom_toTopOf="@+id/dividerTop"
+        app:layout_constraintEnd_toStartOf="@+id/tvDetailTitle"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
 
     <TextView
         android:id="@+id/tvDetailTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="44dp"
         android:text="Detalhes do Funcionário"
+        android:textColor="@color/green"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,9 +37,10 @@
         android:id="@+id/dividerTop"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:background="#AAAAAA"
-        app:layout_constraintTop_toBottomOf="@id/tvDetailTitle" />
+        app:layout_constraintTop_toBottomOf="@id/tvDetailTitle"
+        tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
         android:id="@+id/imgDetailProfile"
@@ -42,6 +58,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:textColor="@color/blue"
         android:text="Carregando..."
         android:textSize="20sp"
         android:textStyle="bold"
@@ -65,6 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Status dos Certificados"
+        android:textColor="@color/blue"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:textColor="@color/blue"
         android:text="AVSEC"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/statusDetailAvsec"
@@ -113,6 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:text="CNV"
+        android:textColor="@color/blue"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/statusDetailCnv"
         app:layout_constraintTop_toTopOf="@id/statusDetailCnv" />
@@ -142,6 +162,7 @@
         android:layout_marginStart="12dp"
         android:text="Credencial"
         android:textStyle="bold"
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@id/statusDetailCred"
         app:layout_constraintTop_toTopOf="@id/statusDetailCred" />
 
@@ -159,6 +180,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/green"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />

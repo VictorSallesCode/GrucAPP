@@ -8,17 +8,34 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@drawable/background"
         android:layout_height="wrap_content"
         android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logotipo"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle"
+            app:layout_constraintVertical_bias="0.636" />
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:text="Cadastro de Usuário"
+            android:textColor="@color/blue"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.606"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,9 +55,13 @@
             android:id="@+id/btnSelectPhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
             android:text="Selecionar Foto"
+            android:textColor="@color/green"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imgProfile" />
 
@@ -49,6 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
             android:text="Sou Líder da Operação"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnSelectPhoto" />
@@ -117,6 +140,7 @@
                 android:layout_height="wrap_content"
                 android:text="Datas de Emissão (DD/MM/AAAA)"
                 android:textStyle="bold"
+                android:textColor="@color/blue"
                 android:paddingBottom="5dp"/>
 
             <EditText
@@ -147,7 +171,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Cadastrar"
-            android:backgroundTint="@color/design_default_color_primary"
+            android:textColor="@color/blue"
+            android:backgroundTint="@color/green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layoutCertificates" />

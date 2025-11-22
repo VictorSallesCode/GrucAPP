@@ -6,8 +6,9 @@
     android:layout_height="wrap_content"
     android:padding="8dp"
     android:layout_marginBottom="4dp"
-    android:background="#FFFFFF"
+    android:background="@android:color/transparent"
     android:elevation="2dp">
+
 
     <FrameLayout
         android:id="@+id/borderFrame"
@@ -35,6 +36,7 @@
         android:layout_marginStart="16dp"
         android:text="Nome do Funcionário"
         android:textSize="18sp"
+        android:textColor="@color/blue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/borderFrame"
@@ -45,7 +47,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="CPF: 000.000.000-00"
-        android:textColor="#757575"
+        android:textColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvItemName"
         app:layout_constraintTop_toBottomOf="@id/tvItemName" />
